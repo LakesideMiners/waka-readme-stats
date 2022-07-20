@@ -334,7 +334,7 @@ def get_waka_time_stats():
 
         if showTimeZone.lower() in truthy or showLanguage.lower() in truthy or showEditors.lower() in truthy or \
                 showProjects.lower() in truthy or showOs.lower() in truthy:
-            stats += '📊 **' + translate['This Week I Spend My Time On'] + '** \n\n'
+            stats += '**' + translate['This Week I Spend My Time On'] + '** \n\n'
             stats += '```text\n'
 
             if showTimeZone.lower() in truthy:
@@ -346,14 +346,14 @@ def get_waka_time_stats():
                     lang_list = no_activity
                 else:
                     lang_list = make_list(data['data']['languages'])
-                stats = stats + '💬 ' + translate['Languages'] + ': \n' + lang_list + '\n\n'
+                stats = stats + translate['Languages'] + ': \n' + lang_list + '\n\n'
 
             if showEditors.lower() in truthy:
                 if len(data['data']['editors']) == 0:
                     edit_list = no_activity
                 else:
                     edit_list = make_list(data['data']['editors'])
-                stats = stats + '🔥 ' + translate['Editors'] + ': \n' + edit_list + '\n\n'
+                stats = stats + translate['Editors'] + ': \n' + edit_list + '\n\n'
 
             if showProjects.lower() in truthy:
                 if len(data['data']['projects']) == 0:
@@ -363,14 +363,14 @@ def get_waka_time_stats():
                     data['data']['projects'] = sorted(data['data']['projects'], key=lambda x: x["percent"],
                                                       reverse=True)
                     project_list = make_list(data['data']['projects'])
-                stats = stats + '🐱‍💻 ' + translate['Projects'] + ': \n' + project_list + '\n\n'
+                stats = stats + translate['Projects'] + ': \n' + project_list + '\n\n'
 
             if showOs.lower() in truthy:
                 if len(data['data']['operating_systems']) == 0:
                     os_list = no_activity
                 else:
                     os_list = make_list(data['data']['operating_systems'])
-                stats = stats + '💻 ' + translate['operating system'] + ': \n' + os_list + '\n\n'
+                stats = stats + translate['operating system'] + ': \n' + os_list + '\n\n'
 
             stats += '```\n\n'
 
