@@ -1,3 +1,5 @@
+# LakesideMiners fork with a few small changes, to get rid of emjoies mostly
+
 > Looking For Translation to different languages & Locale  [#23](https://github.com/anmol098/waka-readme-stats/issues/23)
 
 # Dev Metrics in Readme with added feature flags 🎌
